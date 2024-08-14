@@ -1,12 +1,7 @@
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the first string:");
-        String s1 = scanner.nextLine();
-        System.out.println("Enter the second string:");
-        String s2 = scanner.nextLine();
-        scanner.close();
+private static boolean isRotation(String s1, String s2) {
+        if (s1.length() != s2.length()) {
+            return false;
+        }
+        String concatenated = s1 + s1;
+        return concatenated.contains(s2);
     }
-}
